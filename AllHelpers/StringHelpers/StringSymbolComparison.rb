@@ -8,9 +8,8 @@ class Symbol
 	alias :eql? :==
 	def == other
 		if other.respond_to? :to_sym
-			self.eql?(other.to_sym)
-		else
-			false
+			return self.eql?(other.to_sym)
 		end
+		false
 	end
 end
